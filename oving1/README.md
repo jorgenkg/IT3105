@@ -1,31 +1,38 @@
-USAGE
+# Usage
 
-1. import MapGUI from visuals:
+Import MapGUI from visuals:
 
-```
+```Python
 from visuals import MapGUI
 ```
 
-2. Initialize a 2D list representing the window tiles:
+Initialize a 2D list representing the window tiles:
 
-```
+```Python
 board = [[0] * width] * height # 0 represents the background color
 ```
 
-3. Create a new window with the constructor:
+Create a new window with the constructor, eg.:
 
-```
+```Python
+width = 3
+height = 3
+board = [
+  [0, 0, 0],
+  [0, 0, 0],
+  [0, 0, 0]
+]
 window = MapGUI( width, height, board )
 ```
 
-4. Call *update_view* when you whish to update the window:
+Call *update_view* when you whish to update the window:
 
-```
+```Python
 window.update_view( list ) # the list contains your 2D list representation of the window
 ```
 
-5. Call *destroy* to close the window:
+Call *destroy* to close the window:
 
-```
+```Python
 window.destroy()
 ```
