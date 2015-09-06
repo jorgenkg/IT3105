@@ -36,3 +36,6 @@ Call *destroy* to close the window:
 ```Python
 window.destroy()
 ```
+
+## Screen dump
+<img src="https://raw.githubusercontent.com/jorgenkg/IT3105/master/oving1/gui_screendump.png" width="250px" />
