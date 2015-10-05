@@ -35,7 +35,8 @@ window.plot( positions ) # the dictionary initialized above
 for rule in rules:
     # Loop over the specified rules to determine which nodes are connected with a line.
     # In this assignment, it should be two variables involved in each atomic rule.
-    # A variable name should be represented as a string according to how the `positions` dictionary was formatted
+    # @params variable_names should be represented as a string with respect to how 
+    # the `positions` dictionary was initialized.
     first_variable_name = rule.variable1
     second_variable_name = rule.variable2
     
