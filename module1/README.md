@@ -38,4 +38,4 @@ window.destroy()
 ```
 
 ## Screen dump
-<img src="https://raw.githubusercontent.com/jorgenkg/IT3105/master/oving1/gui_screendump.png" width="250px" />
+<img src="https://raw.githubusercontent.com/jorgenkg/IT3105/master/module1/gui_screendump.png" width="250px" />
