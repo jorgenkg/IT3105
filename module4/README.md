@@ -1,3 +1,7 @@
+# 2048
+
+> This board supports tiles up to 65536
+
 # Usage
 
 Import GameWindow from visuals:
@@ -26,3 +30,6 @@ board = [   # A list of values currently present in the board on the form 2^x.
 
 window.update_view( board ) # 1D list representing the board
 ```
+
+## Screen dump
+<img src="https://raw.githubusercontent.com/jorgenkg/IT3105/master/module4/gui_screendump.png" width="250px" />
