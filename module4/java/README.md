@@ -32,7 +32,7 @@ gui.drawBoard(board) // 1D list representing the board
 ```
 
 ## Screen dump
-<img src="https://raw.githubusercontent.com/jorgenkg/IT3105/master/module4/gui_screendump.png" width="250px" />
+<img src="https://raw.githubusercontent.com/jorgenkg/IT3105/master/module4/java/gui_screendump.png" width="250px" />
 
 # Kudos
 This code has been written by [@freva](https://github.com/freva) in its entirety.
