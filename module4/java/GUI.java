@@ -1,4 +1,4 @@
-package Java;
+package finn;
 
 import javax.swing.*;
 import java.awt.*;
@@ -7,16 +7,40 @@ public class GUI extends JPanel {
     private static final int TILE_SIZE = 128;
     private static final int TILES_MARGIN = 16;
     private static final String FONT_NAME = "Arial";
-    private static final Color[] TILE_COLORS = new Color[]{new Color(0xCCC0B3), new Color(0xeee4da), new Color(0xede0c8), new Color(0xf2b179), new Color(0xf59563), new Color(0xf67c5f),
-    new Color(0xf65e3b), new Color(0xedcf72), new Color(0xedcc61), new Color(0xedc850), new Color(0xedc53f), new Color(0xedc22e), new Color(0x3c3a32)};
+    private static final Color[] TILE_COLORS = new Color[]{new Color(0x9e948a), new Color(0xeee4da), new Color(0xede0c8), new Color(0xf2b179), new Color(0xf59563), new Color(0xf67c5f),
+            new Color(0xf65e3b), new Color(0xedcf72), new Color(0xedcc61), new Color(0xedc850), new Color(0xedc53f), new Color(0xedc22e), new Color(0x3c3a32)};
     private static final Color[] TEXT_COLORS = new Color[]{new Color(0x776E65), new Color(0xf9f6f2)};
+    private int[] board = null;
 
 
-    public void drawBoard(Graphics g, long board) {
+    public static GUI getWindow() {
+        GUI gui = new GUI();
+        gui.setBackground(new Color(0x92877d));
+        JFrame game = new JFrame();
+        game.setTitle("2048");
+        game.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        game.setResizable(false);
+        game.pack();
+        game.setSize(592 + game.getInsets().left + game.getInsets().right, 592 + game.getInsets().top + game.getInsets().bottom);
+
+        game.add(gui);
+        game.setLocationRelativeTo(null);
+        game.setVisible(true);
+        return gui;
+    }
+
+
+    public void drawBoard(int[] board) {
+        this.board = board;
+        repaint();
+    }
+
+
+    public void paint(Graphics g) {
         super.paint(g);
         for (int y = 0; y < 4; y++)
             for (int x = 0; x < 4; x++)
-                drawTile(g, (int) (board>>(x*4 + y*16))&15, x, y);
+                drawTile(g, board[y*4 + x], x, y);
     }
 
 
